@@ -35,7 +35,7 @@ login:
 # Push changes to registry
 push:
 	docker push $(registry)$(repo)/swipl:latest
-	docker tag $(registry)$(repo)/swip $(registry)$(repo)/swipl:$(version)
+	docker tag $(registry)$(repo)/swipl $(registry)$(repo)/swipl:$(version)
 	docker push $(registry)$(repo)/swipl:$(version)
 
 
