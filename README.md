@@ -41,8 +41,14 @@ If you want to persist code/data between session make sure to use /cwd.
 TODO Add instructions to run under MacOS
 
 ### Windows
-TODO Add swipl.bat and instructions to run under Windows (requires X Server like XMobiTerm),
+- run a Xserver like XMobiTerm, VcXsrv etc.
+- lookup host ip address via ipconfig
+- determen your volume mapping: 
+  - docker in a vagrant box: `$(pwd):/cwd`
+  - docker toolbox: `/c/Users/%USERNAME%:/cwd` (not tested)
 
+`docker run -ti --rm -e DISPLAY=<host ip address>:0 -v <your volume mapping> pietere/swipl`
+TODO Add swipl.bat 
 
 ## Build
 Run `make all` produces a pietere/swipl image.
