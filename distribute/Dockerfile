@@ -4,12 +4,15 @@ FROM debian:jessie
 MAINTAINER PieterE
 
 # install prerequisites
-# first apt-get is to statisfy core dependencies.
-# second apt-get gets xpce dependencies.
+# apt-get line:
+#	1 - is to statisfy core dependencies.
+# 	2 - get gets xpce dependencies.
+#	3 - add certs needed for outbound ssl connections.
 RUN apt-get update \
   && apt-get dist-upgrade -yq \
   && apt-get install -yq libarchive13 libgmp10 libossp-uuid16 libssl1.0.0 \
   && apt-get install -yqq libxft2 libxinerama1 libxpm4 libjpeg62-turbo libxt6 libxext6 \
+  && apt-get install -yqq ca-certificates \
   && apt-get clean
 
 # install swipl
