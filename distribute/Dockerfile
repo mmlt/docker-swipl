@@ -15,4 +15,7 @@ RUN apt-get update \
 # install swipl
 ADD swipl-binary.tgz .
 RUN ln -s /swipl/bin/swipl /usr/bin/swipl
-CMD swipl
+
+# 
+volume /cwd
+CMD cd /cwd; swipl
