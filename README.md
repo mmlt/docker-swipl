@@ -45,8 +45,8 @@ TODO Add swipl.bat and instructions to run under Windows (requires X Server like
 
 
 ## Build
-Run `make all` produces a mmlt/swipl image.
+Run `make all` produces a pietere/swipl image.
+
 Use `make login` and `make push` to push the image to docker.io
-TODO push image to index.docker.io
 
 
