@@ -5,6 +5,7 @@ If you a looking for a minimal SWI-Prolog image, for example for running Prolog 
 
 ## Run
 Prerequisite: Docker](docker.io)  should be installed.
+
 Use the `swipl` script to run the latest image from docker.io (or the one produced by 'Build', see below) 
 
 ```
@@ -16,7 +17,8 @@ Please visit http://www.swi-prolog.org for details.
 
 For help, use ?- help(Topic). or ?- apropos(Word).
 
-?- ```
+?- 
+```
 Type `guitracer.` at the promt.
 ```
 % The graphical front-end will be used for subsequent tracing
