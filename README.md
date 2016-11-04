@@ -30,7 +30,7 @@ Type `trace, A is 1.` to invoke the graphical debugger.
 You should see the debugger window pop-up and a `A = 1.` response in the console.
 
 Tips:
-- By default the curret working directory is available in the container at /cwd.
+- By default the current working directory is available in the container at /cwd.
 If you want to persist code/data between session make sure to use /cwd.
 
 
