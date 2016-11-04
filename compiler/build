@@ -1,0 +1,10 @@
+#! /bin/bash
+set -e
+
+mkdir -p /swipl-src
+# download source
+curl $1 | tar -x -z --strip-components=1 -C /swipl-src -f -
+# build into /swipl
+sed -e 's|PREFIX=$HOME|PREFIX=/swipl|g' -i swipl-src/build.templ
+cd swipl-src && ./build.templ
+tar czf /distribute/swipl-binary.tgz /swipl

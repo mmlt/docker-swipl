@@ -1,0 +1,4 @@
+#!/bin/bash
+# Run SWI-Prolog in a container.
+# Swipl has access to host X11 (for guitracer) and the current directory is available at /cwd
+docker run -ti --rm -e DISPLAY --net=host -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME/.Xauthority:/root/.Xauthority -v $(pwd):/cwd swipl
