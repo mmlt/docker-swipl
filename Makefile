@@ -1,11 +1,11 @@
 .PHONY: all swipl-compiler swipl-binary swipl-image login push clean
 
 # swipl version to build
-version=7.3.19
+version?=7.3.19
 # registry to push to (gcr.io/, quay.io/, empty for index.docker.io)
-registry=
+registry?=
 # repository within registry
-repo=pietere
+repo?=pietere
 
 cwd=$(shell pwd)
 

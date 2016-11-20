@@ -32,7 +32,7 @@ You should see the debugger window pop-up and a `A = 1.` response in the console
 Tips:
 - By default the current working directory is available in the container at /cwd.
 If you want to persist code/data between session make sure to use /cwd.
-
+- Visit [SWI Prolog Program Development Tools](http://www.swi-prolog.org/IDE.html) for more GUIness
 
 ### Linux
 `swipl` script is provided to run SWI-Prolog (you may want to link or copy it to `/usr/bin`)
@@ -51,8 +51,9 @@ TODO Add instructions to run under MacOS
 TODO Add swipl.bat 
 
 ## Build
-Run `make all` produces a pietere/swipl image.
+Run `version=7.3.31 make all` produces a pietere/swipl image.
 
-Use `make login` and `make push` to push the image to docker.io
+To push the image first login `make login` and then `version=7.3.31 make push` to tag the image and push it to docker.io
+
 
 
